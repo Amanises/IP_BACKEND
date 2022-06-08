@@ -10,7 +10,7 @@ const get_urls = require('./routes/get');
 dotenv.config() ; // activate the dot env settings
 
 //connect to mongoose data base
-mongoose.connect(process.env.DATABASE_URI,() => {console.log("Database connected")}, e => console.error(e)) ;
+mongoose.connect("mongodb+srv://admin:admin@cluster0.rgwtd.mongodb.net/?retryWrites=true&w=majority",() => {console.log("Database connected")}, e => console.error(e)) ;
 
 const port = process.env.PORT || 5000 ; 
 
