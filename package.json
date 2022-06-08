@@ -4,7 +4,7 @@
   "description": "Backend version 2 for IP updation portal",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node ./server.js"
   },
   "author": "puneet and navneet",
   "license": "ISC",
