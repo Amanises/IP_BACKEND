@@ -5,14 +5,17 @@
   "main": "server.js",
   "scripts": {
     "start": "node ./server.js",
-    "devStart" : "nodemon server.js"
+    "devStart": "nodemon server.js"
   },
   "author": "puneet and navneet",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "mongodb": "^4.7.0",
     "mongoose": "^6.3.4"
   },
   "devDependencies": {

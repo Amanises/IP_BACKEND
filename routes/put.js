@@ -3,6 +3,7 @@ const express = require('express') ;
 const router = express.Router();
 
 const ip_data_schema = require('../models/ip_data'); // fetch ip_data schema
+const user_schema = require('../models/user') // fetch user schema
 
 
 
