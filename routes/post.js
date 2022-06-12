@@ -10,9 +10,9 @@ const bcrypt = require('bcrypt');
 // import for client usage mongodb ----------------------------------------------------------------------------
 const {MongoClient} = require('mongodb');
 
-// const url_local = 'mongodb://localhost:27017';  // change this to db url of database in posoco server.
+const url_local = 'mongodb://localhost:27017';  // change this to db url of database in posoco server.
 // const url_local = 'mongodb://10.5.134.28:27017/'
-const url_local = 'mongodb+srv://admin:admin@cluster0.rgwtd.mongodb.net/?retryWrites=true&w=majority';
+// const url_local = 'mongodb+srv://admin:admin@cluster0.rgwtd.mongodb.net/?retryWrites=true&w=majority';
 const client = new MongoClient(url_local);
 const dbname = 'SLDCCybersecuritydashboard'; //this is our database name
 
