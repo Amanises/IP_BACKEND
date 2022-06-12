@@ -62,23 +62,23 @@ app.use('/get',get_urls) ;
 // main().catch(console.error);
 
 // FROM Documentations of npm mongodb
-const url_local = 'mongodb://localhost:27017';
-const client = new MongoClient(url_local);
-const dbname = 'SLDCCybersecuritydashboard'; //this is our database name
+// const url_local = 'mongodb://localhost:27017';
+// const client = new MongoClient(url_local);
+// const dbname = 'SLDCCybersecuritydashboard'; //this is our database name
 
-async function main(prop){
-    await client.connect();
-    console.log('Connected as a client to server');
-    const db = client.db(dbname);
-    const collection = db.collection('users'); // the collection name
+// async function main(prop){
+//     await client.connect();
+//     console.log('Connected as a client to server');
+//     const db = client.db(dbname);
+//     const collection = db.collection('users'); // the collection name
     
-    // type your code here
-    const filter = await collection.find(prop).toArray();
-    // console.log(filter);
+//     // type your code here
+//     const filter = await collection.find(prop).toArray();
+//     // console.log(filter);
     
-    return filter;
-}
-const find_user = {username:'PB-SLDC'};
+//     return filter;
+// }
+// const find_user = {username:'PB-SLDC'};
 // const a = main(find_user)
 // .then(data => {return data})
 // .catch(console.error)
@@ -87,19 +87,19 @@ const find_user = {username:'PB-SLDC'};
 
 
 app.get('/',(req,res) => {
-    res.send('Hello world!')
+    res.send('Backend Server Running')
 })
 
-app.get('/test',async (req,res) => {
-    // res.send('Hello world testing!')
-    const a = await main(find_user)
-.then(data => {return data})
-.catch(console.error)
-.finally(()=>client.close())
-res.send(a)
-})
+// app.get('/test',async (req,res) => {
+//     // res.send('Hello world testing!')
+//     const a = await main(find_user)
+// .then(data => {return data})
+// .catch(console.error)
+// .finally(()=>client.close())
+// res.send(a)
+// })
 
 
 app.listen(port,()=>{
-    console.log(`Example app listening on port ${port}`);
+    console.log(`Backend listening on port ${port}`);
 })
